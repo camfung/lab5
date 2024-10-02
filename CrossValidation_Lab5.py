@@ -174,7 +174,16 @@ def part_4():
         )
 
         # Title and labels
-        ax.set_title(f"Errors for p = {p}", fontsize=14, weight="bold")
+        if p == 2:
+            ax.set_title(
+                f"Errors for p = {p}\nHighest Bias", fontsize=14, weight="bold"
+            )
+        elif p == 16:
+            ax.set_title(
+                f"Errors for p = {p}\nHighest variance", fontsize=14, weight="bold"
+            )
+        else:
+            ax.set_title(f"Errors for p = {p}", fontsize=14, weight="bold")
         ax.set_xlabel("Number of Data Points (n)", fontsize=12)
         if i % 2 == 0:  # Only label y-axis for the first plot in each row
             ax.set_ylabel("Error", fontsize=12)
@@ -194,3 +203,4 @@ def part_4():
 
 
 part_3()
+part_4()
